@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wax On • Ski Fast</title>
+    <title>Wax On Ski Fast</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Basic styles for input focus */
@@ -23,10 +23,10 @@
         const INSTAGRAM = 'https://instagram.com/wax_on_ski_fast';
 
         const services = [
-            { id: 'premium', title: 'Premium Wax', desc: 'Long-lasting performance wax for peak conditions.', price: '$40' },
-            { id: 'premium_tune', title: 'Premium Tune & Wax', desc: 'Full tune plus premium wax for best performance.', price: '$65' },
-            { id: 'basic', title: 'Basic Wax', desc: 'Quick wax for everyday skiing.', price: '$45' },
-            { id: 'sharpen', title: 'Sharpen & Tune', desc: 'Edge sharpening + base tune.', price: '$55' },
+            { id: 'premium', title: 'Premium Wax', desc: 'Long-lasting performance wax for peak conditions.Prices may vary depending on where you are located.', price: '$30' },
+            { id: 'premium_tune', title: 'Premium Tune & Wax', desc: 'Full tune plus premium wax for best performance. Prices may vary depending on where you are located.', price: '$65' },
+            { id: 'basic', title: 'Basic Wax', desc: 'Quick wax for everyday skiing. Prices may vary depending on where you are located.', price: '$20' },
+            { id: 'sharpen', title: 'Sharpen & Tune', desc: 'Edge sharpening + base tune. Prices may vary depending on where you are located.', price: '$45' },
         ];
     </script>
     
@@ -35,7 +35,7 @@
             <div class="flex items-center gap-3">
                 <img src="./Current WAX on.jpg" alt="logo" class="w-12 h-12 object-contain" />
                 <div>
-                    <div class="font-bold">Wax On • Ski Fast</div>
+                    <div class="font-bold">Wax On Ski Fast</div>
                     <div class="text-xs text-gray-600">Mobile waxing & tuning — Cache Valley</div>
                 </div>
             </div>
@@ -344,6 +344,9 @@
 
             // Attach listeners
             document.getElementById('main-header').addEventListener('click', handleNavigationClick);
+            // Ensure nav buttons that live in main content (e.g. the home page buttons) are handled
+            const mainContent = document.getElementById('main-content');
+            if (mainContent) mainContent.addEventListener('click', handleNavigationClick);
             document.getElementById('services-grid').addEventListener('click', handleServiceSelect);
             document.getElementById('booking-form').addEventListener('submit', submitBooking);
             
